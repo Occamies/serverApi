@@ -72,7 +72,7 @@ router.put("/:id",upload.single("servicePic"), async (req, res) => {
 
     //hvis der kommer en fil med i requestt = billedet skal rettes (ellers skal det ikke)
     if(req.file) {
-      req.body.profilepic = req.file.filename
+      req.body.servicePic = req.file.filename
     }
 
     let service = await Service.findByIdAndUpdate({ _id: req.params.id }, req.body, {
