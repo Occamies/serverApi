@@ -66,7 +66,7 @@ router.post("/", upload.single("servicePic"), async (req, res) => {
 
 //----PUT---------------
 //----------------------------------------------
-router.put("/:id",upload.single("profilepic"), async (req, res) => {
+router.put("/:id",upload.single("servicePic"), async (req, res) => {
   console.log("Service PUT", req.body);
   try {
 
